@@ -1,1 +1,1 @@
-# gegova_django
+# Gegova
