@@ -1,0 +1,46 @@
+{% extends 'layout/index.html' %}
+{% load static %}
+
+{% block title %} {{ article.title }} {% endblock  %}
+
+{% block content %}
+<div class='content-pg' >
+    <div class="hd-article">
+        <div class="t-article">
+            <h1> {{ article.title }} </h1>
+            <span> {{ article.created_at }} </span>
+            <p> {{ article.description }} </p>
+        </div>
+        <div class="img-article">
+            {% if article.image != 'null' and article.image.url|length >= 1   %}
+                <div class="image">
+                    <img src=" {{article.image.url}} " alt="{{ article.title }}" />
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="p-article">
+        <p>{{ article.content|safe }}</p>
+    </div>
+
+    <div class="aut-article">
+        <div class="img-autor">
+            <img src="{% static 'images/Gerlin.jpg' %}" alt="Gerlin Gonzalez">
+        </div>
+        <div class="data-autor">
+            <span>Autor: </span>
+            <h2>{{article.user.first_name}}  {{article.user.last_name}}</h2>
+
+            <div class="redes">
+                <img src="{% static 'images/facebookAz.png'%}" alt="Facebook">
+                <img src="{% static 'images/instagramAz.png'%}" alt="Instagram">
+                <img src="{% static 'images/twitterAz.png'%}" alt="Twitter">
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+{% endblock  %}
+

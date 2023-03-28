@@ -1,0 +1,44 @@
+{% extends 'layout/index.html' %}
+
+{% block title %} {{ category.name }} {% endblock  %}
+
+{% block content %}
+
+<div class='content-pg' >
+
+
+    <h1 class="title-pg"> {{ category.name }} </h1>
+    {% comment %} <p> {{ category.description }} </p> {% endcomment %}
+    {% for article in articles %}
+        <article class="article-item"> 
+            {% if article.image != 'null' and article.image.url|length >= 1   %}
+                <div class="image">
+                    <img src=" {{article.image.url}} " />
+                </div>
+
+            {% endif %}
+                <div class="data">
+
+                    <h3>
+                        <a href=" {% url 'article' article.id %}">
+                            {{ article.title }}
+                        </a>
+                    </h3> 
+                   <span>
+                    {% for category in article.categories.all  %}
+                        <a href="#" > {{ category }} </a>
+                    {% endfor %}
+                    
+                        {{ article.user.first_name }} {{article.user.last_name}} |
+                        {{ article.created_at }} </span>
+                    <p>
+                        {{ article.description|safe }}
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+        </article>
+    {% endfor %}
+
+    </div>
+{% endblock  %}
+

@@ -1,0 +1,41 @@
+{% extends 'layout/index.html' %}
+
+{% block title %} {{titulo}} {% endblock  %}
+
+{% block content %}
+
+
+<div class='content-pg'>
+    <h1 class='title-pg'>{{titulo}}</h1>
+
+    {% for service in services  %}
+    <div class="services">
+      <div class=" items-services-pg">
+
+        <article class="item-pg ">
+          <div class='img-item-pg'>
+            <img src="{{ service.image.url }}" alt="{{ service.title }}" />
+          </div>
+          <div class='desc-item-pg'>
+            <h3>{{service.title}}</h3>
+            <p> {{service.content|safe}}
+            </p>
+            <a
+              href="#"
+              class="btn">
+              Ver Mas
+        </a>
+          </div>
+        </article>
+
+    </div>
+</div>
+
+</div>
+
+
+
+
+{% endfor %}
+
+{% endblock  %}

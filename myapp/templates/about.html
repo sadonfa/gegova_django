@@ -1,0 +1,109 @@
+{% extends 'layout/index.html' %}
+{% load static %}
+
+{% block title %} {{ titulo }} {% endblock  %}
+
+{% block content %}
+
+<div class='content-pg' >
+
+    <h1 class='title-pg'>{{ titulo }}</h1> 
+   
+    
+
+        {% for about in cont_about  %}
+        <div class="about">
+            <div class="img-about">
+                <img src="{{ about.image.url }}" alt="about" />
+            </div>
+            <div class="desc-about">
+                <h2>{{about.title}}</h2>
+                <p>
+                {{ about.content|safe}}
+                </p>
+            </div>            
+        </div>
+        {% endfor %}
+{% for team in teams %}
+
+<div class='team'>
+    <div class="desc-team">
+      <h1>{{ team.name }}</h1>
+      <span> {{ team.profession }}</span>
+      <p> {{ team.description|safe }}
+      </p>
+      <span> {{ team.technologies }}  </span>
+
+      {% comment %}  REDES  {% endcomment %}
+      <div class="redesLeft">
+        <a
+          href={{ team.url_facebook }}
+          target="_blank"
+          rel="noreferrer noopener "
+        >
+          <img src="{% static 'images/facebookAz.png'%}" alt="Facebook" />
+        </a>
+        <a
+          href={{ team.url_instagram }}
+          target="_blank"
+          rel="noreferrer noopener "
+        >
+          <img src="{% static 'images/instagramAz.png'%}" alt="Instagram" />
+        </a>
+
+        <a
+          href={{ team.url_twitter }}
+          target="_blank"
+          rel="noreferrer noopener "
+        >
+          <img src="{% static 'images/twitterAz.png'%}" alt="Twitter" />
+        </a>
+        <a
+          href={{ team.url_linkedin}}
+          target="_blank"
+          rel="noreferrer noopener "
+        >
+          <img src="{% static 'images/linkedin.png'%}" alt="Linkedin" />
+        </a>
+        <a
+          href={{ team.url_github }}
+          target="_blank"
+          rel="noreferrer noopener "
+        >
+          <img src="{% static 'images/github.png'%}" alt="Github" />
+        </a>
+        <a
+          href= {{ team.url_portafolio }}
+          target="_blank"
+          rel="noreferrer noopener "
+        >
+          <img src="{% static 'images/portafolio.png'%}" alt="Portafolio" />
+        </a>
+      </div>
+    </div>
+    <div class="img-team">
+      <img src="{{ team.photo.url }}" alt="team" />
+    </div>
+  </div>
+
+
+{% endfor %}
+    
+
+</div>
+
+
+    <div class="phrases">
+      <img src="{% static 'images/img-frase.png'%}" alt="Frases" />
+      <p>
+      “La tecnología no es nada. Lo importante es que tengas fe en la gente, que sean básicamente 
+      buenas e inteligentes, y si les das herramientas, harán cosas maravillosas con ellas” 
+      </p>
+      <span>Gerlin Gonzalez Valenzuela, Director Ejecutivo</span>
+    </div>
+
+
+
+
+
+{% endblock  %}

@@ -1,0 +1,165 @@
+{% extends 'layout/index.html' %}
+{% load static %}
+
+{% block title %} Inicio {% endblock  %}
+
+{% block content %}
+
+
+    
+    <!-- START HEADER -->
+    <header class="header">
+        <div class="hd-content">
+            <!-- DESCRIPTION -->
+            <div class="description">
+                <p>
+                    Logra que tu empresa llegue a mas cliente con una estrategia de marketing 
+                    personalizada a tus necesidades, ofrecemos un estudio previo de tu negocio.
+                </p>
+                <button class="btn">Comienza ahora</button>
+            </div>
+            <!-- IMAGEN -->
+            <div class="img-header">
+                <img src="{% static 'images/MarketingDigital.png'%}" alt="Marketing">
+            </div>
+        </div>
+
+        <!-- REDES -->
+        <div class="redes">
+            <img src="{% static 'images/facebook.png'%}" alt="Facebook">
+            <img src="{% static 'images/instagram.png'%}" alt="Instagram">
+            <img src="{% static 'images/twitter.png'%}" alt="Twitter">
+        </div>
+
+    </header>
+    <!-- END HEADER -->
+
+    <!-- START ABOUT -->
+    <div class="about">
+        <!-- IMAGE -->
+        <div class="img-about">
+            <img src="{% static 'images/about.png'%}" alt="about">
+        </div>
+
+        <!-- ABOUT -->
+        <div class="desc-about">
+            <h1>¿Quienes somos?</h1>
+            <p>
+                Somos expertos en desarrollo web. creamos tu diseño personalizados y 
+                ofrecemos un servicio profesional muy confiable.
+                <br/><br/>
+                Nuestra agencia es experta en la tecnología web y en el marketing 
+                digital. Nos especializamos en: diseño web, desarrollo web, e-commersce,
+                SEO Orgánico, marketing digital.
+            </p>
+            <button class="btn">Leer Mas</button>
+        </div>
+
+    </div>
+    <!-- END ABOUT -->
+
+    <!-- START SERVICES -->
+    <div class="services">
+        <h1>Nuestros Servicios</h1>
+        <div class="items-services">
+            <article class="item az1">
+                <img src="{% static 'images/DeveloperWeb.png'%}" alt="Developer Web">
+                <h3>Desarrollo Web</h3>
+                <p>
+                    Desde el diseño hasta el lanzamiento de una pagina web empresarial robusta, 
+                    desarrollamos todo usando las tecnologías mas modernas adecuada a su proyecto.
+                </p>
+                <button class="btn">Ver Mas</button>
+            </article>
+            <article class="item az2">
+                <img src="{% static 'images/developerMovil.png'%}" alt="Developer Movil">
+                <h3>Desarrollo Movil</h3>
+                <p>
+                    Desarrollamos tus aplicaciones moviles con con gran flexibilidad, hermosos diseños
+                    y mas robusta.
+                    Aplicaciones completas y al alcance de tus cliente.
+                </p>
+                <button class="btn">Ver Mas</button>
+            </article>
+            <article class="item az3">
+                <img src="{% static 'images/MarketingDigital2.png'%}" alt="Marketing Digital">
+                <h3>Marketing Digital</h3>
+                <p>
+                    Acompañamos a PyMEs, profesionales y emprendimientos a rentabilizar su negocio y 
+                    destacarlo en la era digital. usando tecnologias de google redes sociales, etc
+                </p>
+                <button class="btn">Ver Mas</button>
+            </article>
+        </div>
+    </div>
+    <!-- END SERVICES -->
+
+    <!-- START OPINIONS -->
+    <div class="opinions">
+        <h1>Opinion de clientes</h1>
+        <div class="items-opinions">
+            <article class="item-opin">
+                <img src="{% static 'images/Gerlin.jpg'%}" alt="photox">
+                <h3>Nombre de usuario</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing
+                    and typesetting industry.
+                </p>
+                <div class="estrellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                </div>
+            </article>
+            <article class="item-opin">
+                <img src="{% static 'images/Gerlin.jpg'%}" alt="photox">
+                <h3>Nombre de usuario</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing
+                    and typesetting industry.
+                </p>
+                <div class="estrellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                </div>
+
+            </article>
+            <article class="item-opin">
+                <img src="{% static 'images/Gerlin.jpg'%}" alt="photox">
+                <h3>Nombre de usuario</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing
+                    and typesetting industry.
+                </p>
+                <div class="estrellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                    <img src="{% static 'images/Estrella.png'%}" alt="strellas">
+                </div>
+            </article>
+        </div>
+
+    </div>
+    <!-- END OPINIONS -->
+
+    <hr class="separador" />
+
+    <!-- START FRASES -->
+    <div class="phrases">
+        <img src="{% static 'images/img-frase.png'%}" alt="Frases">
+        <p>
+            "Experiencia, compromiso y valor.
+            Es nuestra misión brindar constantemente cada uno de ellos a nuestros clientes."
+        </p>
+        <span>Gerlin Gonzalez Valenzuela, Director Ejecutivo</span>
+    </div>
+    <!-- END FRASES -->
+
+
+
+
+{% endblock  %}

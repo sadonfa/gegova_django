@@ -1,0 +1,71 @@
+{% extends 'layout/index.html' %}
+{% load static %}
+
+
+{% block title %} {{ titulo }} {% endblock  %}
+
+{% block content %}
+
+<div class='content-pg'>
+    <h1 class='title-pg'>{{titulo}}</h1>
+    <div class='cont-form'>
+
+{% if form.errors %}
+            
+<div class="danger">
+    Hay errores en el formulario!!
+</div>
+
+{% endif %}
+
+{% if messages %}
+
+{% for mess in messages  %}
+
+<div class="success" >
+{{mess}}
+</div>
+
+{% endfor %}
+
+{% endif %}
+
+<div class='form-contact'>
+<form action="" method="POST" class="input-width" >
+    {% csrf_token %}
+    <p class='info-contact'>
+        Contactanos para brindarte un asesoramiento personalizado
+        y ayudarte ha alcanzar la mejor Experiencia.
+      </p>
+    {{ form }}
+
+    <input type="submit" value="Enviar" class="btn" />
+</form>
+
+</div>
+
+      <div class='image-contact'>
+        <img src="{% static 'images/contact.png'%}" alt='Contacto' />
+      </div>
+    </div>
+
+    <div class="phrases">
+      <p>
+        "Experiencia, compromiso y valor.
+        Es nuestra misión brindar constantemente cada uno de ellos a nuestros clientes."
+      </p>
+      <span>Gerlin Gonzalez Valenzuela, Director Ejecutivo</span>
+    </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock  %}

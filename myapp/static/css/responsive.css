@@ -1,0 +1,263 @@
+@media screen and (max-width: 1024px) {
+    #nav ul li {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 12px;
+    }
+
+    .hd-content .description p {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 798px) {
+
+    .hd-content .img-header img {
+        width: 370px;
+    }
+
+    .hd-content .description p {
+        font-size: 24px;
+    }
+
+    .items-services .item h3 {
+        text-align: center;
+    }
+
+    .about .desc-about {
+        width: 45%;
+    }
+
+    #footer .foot-logo,
+    #footer .foot-data,
+    #footer .foot-form {
+        width: 30%;
+    }
+
+    #footer .foot-form form {
+        padding: 35px 20px;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    #nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        padding-top: 0px;
+    }
+
+    #nav img {
+        width: 40%;
+        padding-top: 40px;
+        margin-bottom: 10px;
+
+    }
+
+    .header {
+        height: 100%;
+        background-position: 50% 0%;
+    }
+
+    .hd-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hd-content .description {
+        width: 80%;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .hd-content .description p {
+        font-size: 20px;
+        text-align: start;
+        text-align: center;
+    }
+
+    .hd-content .img-header {
+        margin-top: 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hd-content .img-header img {
+        width: 300px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about .img-about {
+        width: 100%;
+    }
+
+    .about .desc-about {
+        width: 90%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about .desc-about p {
+        text-align: center;
+    }
+
+    .items-services {
+        flex-direction: column;
+    }
+
+    .items-services .item {
+        width: 79%;
+    }
+
+    .foot-content {
+        flex-direction: column;
+    }
+
+    .items-opinions {
+        flex-direction: column;
+    }
+
+    .item-opin {
+        width: 90%;
+    }
+
+    .phrases img {
+        width: 60%;
+    }
+
+    .phrases p {
+        width: 90%;
+        font-size: 28px;
+    }
+
+    #footer {
+        background-color: #031f40;
+        padding-top: 60px;
+    }
+
+    #footer h1 {
+        width: 70%;
+        border: none;
+    }
+
+    #footer .foot-logo,
+    #footer .foot-data,
+    #footer .foot-form {
+        width: 100%;
+        border-top: 1.7px solid #11324D;
+    }
+
+    #footer .foot-form form {
+        padding: 40px 25px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer .foot-form input[type="text"] {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .team {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .desc-team,
+    .img-team {
+        width: 80%;
+    }
+
+    .img-team {
+        order: -1;
+    }
+
+    .redesLeft {
+        justify-content: center;
+    }
+    
+    .img-header{
+        order: -1;
+    }
+
+    .item-pg{
+        flex-direction: column;
+    }
+
+    .img-item-pg, 
+    .desc-item-pg{
+        width: 90%;
+    }
+
+    .desc-item-pg{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .post-img{
+        order: -1;
+    }
+    .head-pg{
+        flex-direction: column;
+    }
+
+    .img-pg, 
+    .desc-pg{
+        width: 90%;
+    }
+    .desc-pg{
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .cont-pg {
+        width: 90%;
+    }
+
+    .cont-pg h2{
+        margin: 0px auto;
+    }
+
+    .cont-pg p{
+        text-align: center;
+    }
+
+    .cont-form {
+        flex-direction: column;
+    }
+
+    .image-contact, 
+    .form-contact{
+        width: 85%;
+    }
+
+    .image-contact{
+        order: -1;
+    }
+    .form-contact p,
+    .form-contact{
+        text-align: center;
+    }
+
+    .title-pg{
+        width: 100%;
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css'%}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+    <title> {% block title %}{% endblock  %} | Gegova</title>
+</head>
+
+<body>
+    <!-- START NAV -->
+    <nav id="nav">
+        <!-- LOGO -->
+        <img src="{% static 'images/logo.png'%}" alt="Logotipo">
+        <!-- MENU -->
+        <ul>
+            <li>
+                <a href="{% url 'home' %}">
+                    Inicio
+                </a> 
+            </li>
+            <li>
+                <a href="{% url 'about' %}">
+                    Nosotros
+                </a> 
+            </li>
+            <li>
+                <a href="{% url 'services' %}">
+                    Servicios
+                </a> 
+            </li>
+            <li>
+                <a href="{% url 'list-article' %}">
+                    Blog
+                </a>
+                {% comment %} <ul>
+                    {% for categorie in categories %}
+                        <li> <a href="{% url 'category' categorie.0 %}"> {{ categorie.1 }}  </a> </li>                       
+                    {% endfor %}                    
+                </ul> {% endcomment %}
+            </li>
+            <li>
+                <a href="{% url 'contact' %}">
+                    Contacto
+                </a> 
+            </li>
+        </ul>
+    </nav>
+
+    <!-- END NAV -->
+
+    {% block content %}
+    
+    
+    {% endblock  %}
+
+
+
+    <!-- START FOOTER  -->
+    <footer id="footer">
+        <h1>Trabajemos juntos </h1>
+
+        <div class="foot-content">
+
+            <div class="foot-logo">
+                <img src="{% static 'images/logo.png'%}" alt="Logotipo">
+                <!-- REDES -->
+                <div class="redes">
+                    <img src="{% static 'images/facebook.png'%}" alt="Facebook">
+                    <img src="{% static 'images/instagram.png'%}" alt="Instagram">
+                    <img src="{% static 'images/twitter.png'%}" alt="Twitter">
+                </div>
+            </div>
+            <div class="foot-data">
+                <div class="foot-dir">
+                    <h3>Direccion</h3>
+                    <p>
+                        Las Delicias Mz 10 LT 15 
+                        Bolivar,  Cartagena
+                    </p>
+                </div>
+                <div class="foot-email">
+                    <h3>Correo</h3>
+                    <p>info@gegova.co</p>
+                </div>
+                <div class="foot-tel">
+                    <h3>Telefono</h3>
+                    <p>313 8324950</p>
+                </div>
+            </div>
+
+            <div class="foot-form">
+                <form action="" method="POST">
+                    <h3>Subcribete</h3>
+                    <input type="text" name="email" placeholder="Email*">
+                    <input type="submit" value="Inscribirme" class="btn">
+                </form>
+            </div>
+        </div>
+        <span> Creado por &copy; gegova.co </span>
+    </footer>
+    <!-- END FOOTER -->
+</body>
+
+</html>
